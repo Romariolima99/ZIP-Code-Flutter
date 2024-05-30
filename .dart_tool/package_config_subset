@@ -1,7 +1,7 @@
 estudos_flutter_web
 3.4
-file:///home/romario/%C3%81rea%20de%20Trabalho/flutter/flutter-studies/
-file:///home/romario/%C3%81rea%20de%20Trabalho/flutter/flutter-studies/lib/
+file:///home/romario/%C3%81rea%20de%20Trabalho/flutter/ZIP-Code-Flutter/
+file:///home/romario/%C3%81rea%20de%20Trabalho/flutter/ZIP-Code-Flutter/lib/
 async
 2.18
 file:///home/romario/.pub-cache/hosted/pub.dev/async-2.11.0/
@@ -34,6 +34,14 @@ flutter_lints
 3.1
 file:///home/romario/.pub-cache/hosted/pub.dev/flutter_lints-3.0.2/
 file:///home/romario/.pub-cache/hosted/pub.dev/flutter_lints-3.0.2/lib/
+http
+3.3
+file:///home/romario/.pub-cache/hosted/pub.dev/http-1.2.1/
+file:///home/romario/.pub-cache/hosted/pub.dev/http-1.2.1/lib/
+http_parser
+2.12
+file:///home/romario/.pub-cache/hosted/pub.dev/http_parser-4.0.2/
+file:///home/romario/.pub-cache/hosted/pub.dev/http_parser-4.0.2/lib/
 leak_tracker
 3.2
 file:///home/romario/.pub-cache/hosted/pub.dev/leak_tracker-10.0.4/
@@ -90,6 +98,10 @@ test_api
 3.0
 file:///home/romario/.pub-cache/hosted/pub.dev/test_api-0.7.0/
 file:///home/romario/.pub-cache/hosted/pub.dev/test_api-0.7.0/lib/
+typed_data
+2.17
+file:///home/romario/.pub-cache/hosted/pub.dev/typed_data-1.3.2/
+file:///home/romario/.pub-cache/hosted/pub.dev/typed_data-1.3.2/lib/
 vector_math
 2.14
 file:///home/romario/.pub-cache/hosted/pub.dev/vector_math-2.1.4/
@@ -98,6 +110,10 @@ vm_service
 3.3
 file:///home/romario/.pub-cache/hosted/pub.dev/vm_service-14.2.1/
 file:///home/romario/.pub-cache/hosted/pub.dev/vm_service-14.2.1/lib/
+web
+3.3
+file:///home/romario/.pub-cache/hosted/pub.dev/web-0.5.1/
+file:///home/romario/.pub-cache/hosted/pub.dev/web-0.5.1/lib/
 sky_engine
 3.2
 file:///opt/flutter/bin/cache/pkg/sky_engine/
