@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 main() {
-  runApp(const MaterialApp(
-  home: HomePage(),
-  debugShowCheckedModeBanner: false,
+  runApp(MaterialApp(
+    home: HomePage(),
+    debugShowCheckedModeBanner: false,
   ));
 }
-

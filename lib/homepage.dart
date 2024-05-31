@@ -1,18 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import "package:http/http.dart" as http;
-import "dart:convert";
-
-
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  final TextEditingController txtcep = TextEditingController();
+  String resultado = "Seu endereço";
+
+void buscarcep() async {
+  String cep = txtcep.text;
+  String url = "https://viacep.com.br/ws/$cep/json/";
+  http.Response response = await http.get(Uri.parse(url));
+
+  if (response.statusCode == 200) {
+    Map<String, dynamic> dados = json.decode(response.body);
+    String formattedData = '';
+
+    // Iterar sobre o mapa de dados e construir uma string formatada
+    dados.forEach((key, value) {
+      formattedData += '$key: $value\n'; // Adicionar cada chave e valor em uma linha separada
+    });
+
+    setState(() {
+      resultado = formattedData; // Armazenar a string formatada na variável resultado
+    });
+  } else {
+    setState(() {
+      resultado = 'Erro ao buscar o endereço';
+    });
+  }
+}
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,31 +87,29 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 350,
               width: 350,
-              child:
-                  Image.asset("assets/Screenshot_1.png"), // Caminho corrigido
+              child: Image.asset("assets/Screenshot_1.png"), // Caminho corrigido
             ),
             const SizedBox(height: 20),
-            const TextField(
+            TextField(
+              controller: txtcep,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: "Digite seu cep",
               ),
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                // Ação quando o botão for pressionado
-              },
+              onPressed: buscarcep, // Ação quando o botão for pressionado
               child: const Text(
                 'Consultar',
               ),
             ),
             const SizedBox(height: 15),
-            const Text(
-              'Resultado',
-              style: TextStyle(fontSize: 18),
+            Text(
+              resultado,
+              style: const TextStyle(fontSize: 18),
             ),
           ],
         ),
