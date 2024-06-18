@@ -47,6 +47,8 @@ samples, guidance on mobile development, and a full API reference.
    flutter pub get
 ```
 
+- Execute a aplicação
+
 ```js
    flutter run
 ```
