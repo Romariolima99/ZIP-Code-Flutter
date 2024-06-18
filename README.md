@@ -31,6 +31,25 @@ samples, guidance on mobile development, and a full API reference.
 - Dart
 - API ViaCEP
 
+## Instalação
+
+- Siga os passos abaixo para clonar e executar o projeto:
+
+- Clone o repositório:
+
+```js
+ git clone https://github.com/Romariolima99/ZIP-Code-Flutter.git
+```
+
+- Instale as dependências:
+
+```js
+   flutter pub get
+```
+
+```js
+   flutter run
+```
 
 ## Preview
 
